@@ -1,10 +1,11 @@
 import Offer from "./Offer";
 
-function JobOffers({ data }) {
+function JobOffers({ data, handleFilterClick }) {
   return (
     <section style={{ paddingTop: "100px" }}>
       {data.map((offer) => (
         <Offer
+          handleFilterClick={handleFilterClick}
           key={offer.id}
           company={offer.company}
           logo={offer.logo}

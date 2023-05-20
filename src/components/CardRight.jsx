@@ -1,13 +1,13 @@
-function CardRight({ role, level, languages, tools }) {
+function CardRight({ role, level, languages, tools, handleFilterClick }) {
     return (
       <div className="RightContainer">
-        <button>{role}</button>
-        <button>{level}</button>
+        <button onClick={() => handleFilterClick(role)}>{role}</button>
+        <button onClick={() => handleFilterClick(level)}>{level}</button>
         {languages.map((language, index) => (
-          <button key={index}>{language}</button>
+          <button key={index} onClick={() => handleFilterClick(language)}>{language}</button>
         ))}
         {tools.map((tool, index) => (
-          <button key={index}>{tool}</button>
+          <button key={index} onClick={() => handleFilterClick(tool)}>{tool}</button>
         ))}
       </div>
     );
