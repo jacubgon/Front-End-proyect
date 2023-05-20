@@ -15,6 +15,7 @@ const Offer = ({
   location,
   languages,
   tools,
+  handleFilterClick
 }) => {
   return (
     <>
@@ -48,6 +49,7 @@ const Offer = ({
           location={location}
           />
            <CardRight 
+           handleFilterClick={handleFilterClick}
            role={role}
            level={level}
            languages={languages}

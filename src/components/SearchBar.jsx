@@ -1,12 +1,12 @@
 import Card from "react-bootstrap/Card";
 
-function SearchBar() {
+function SearchBar({ selectedFilters }) {
   return (
     <Card
       className="Searchbar"
       style={{
-        justifyContent:'space-between',
-        display:'flex',
+        justifyContent: "space-between",
+        display: "flex",
         backgroundColor: "white",
         width: "1110px",
         height: "72px",
@@ -15,20 +15,22 @@ function SearchBar() {
         marginRight: "165px",
         marginTop: " 120px",
         boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
-      
       }}
     >
-      <Card.Body >
-        <button>BOTON</button>
+      <Card.Body>
+        {selectedFilters.map((filter, index) => (
+          <button key={index} className="filter">
+            {filter}
+          </button>
+        ))}
         <button
-        //   style={{
-        //     fontSize: "16px",
-        //     lineHeight: "24px",
-        //     textAlign: "right",
-        //     textDecorationLine: "underline",
-        //     
-        //     background:'none'
-        //   }}
+          style={{
+            fontSize: "16px",
+            lineHeight: "24px",
+            textAlign: "right",
+            textDecorationLine: "underline",
+            background: "none",
+          }}
         >
           Clear
         </button>
@@ -38,4 +40,3 @@ function SearchBar() {
 }
 
 export default SearchBar;
-
