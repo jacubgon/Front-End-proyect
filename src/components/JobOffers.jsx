@@ -1,6 +1,7 @@
 import Offer from "./Offer";
 
 function JobOffers({ data, handleFilterClick }) {
+  
   return (
     <section style={{ paddingTop: "100px" }}>
       {data.map((offer) => (
